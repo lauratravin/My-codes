@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+    body{
+        max-width: 100%;
+    }
+    h2{
+        text-align: center;
+        padding: 30px 0px;
+    }
+    .content{
+        width: 1200px;
+        margin: 0px auto;
+    }
+    #little-menu{
+        width: 80%;
+        margin: auto;
+        
+        
+    }
+/*
+    .clearfix::before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+*/
+    #little-menu{
+        text-align: right;
+    }
+    #little-menu a{
+        min-width: 10%;
+        padding: 10px 5px;
+        text-decoration: none;
+        list-style: none;
+        display: inline-block;
+        margin-bottom: 10px;
+        text-align: center;
+        vertical-align:middle;
+        border-radius: 30px;
+    }
+    div#little-menu :first-child{
+         border: solid 1px #0978C8;
+/*         color: #0978C8;*/
+        
+    }
+    div#little-menu :last-child{
+         border: solid 1px #11884B;
+/*         color: #11884B;*/
+    }
+    .tab{
+        width: 80%;
+        margin: auto;
+/*        border: solid 1px #000;*/
+    }
+    .tabcontent{
+        padding-bottom: 20px;
+    }
+    .e{
+      color: #11884B;  
+    }
+    .p{
+       color: #0978C8;    
+    }
+    .e:before{
+        content: url("assets/s_vest.png");
+        padding-right: 10px;
+        vertical-align: middle;
+        
+    }
+    .p:before{
+        content: url("assets/s_principle.png");
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+    .s_btn{
+        background: #52796F !important;      
+        padding: 30px 10px;
+        
+    }
+    .s_btn button{
+        color: #fff;
+        font-size: 33px;
+        border: none;
+        font-family: 'Noto Serif', serif;
+        background: #52796F !important;
+        width: 100%;
+        text-align: left;
+        display: inline-block;
+        width: 85%;
+            
+      
+    }   
+    .s_btn button:focus{
+        outline: 0px;
+    }
+    
+    /*Arrow*/
+    button i  {
+        color: #fff;
+        font-size: 0.5em !important;   
+    }
+    /*Timeline content*/
+    .tab h3 {
+        color: #52796F;
+        font-family:'Noto Serif', serif;
+        font-size: 24px;
+        display: block;
+        border-bottom: solid 1px #52796F;
+        margin-bottom: 10px;
+    }
+    .tabcontent a{
+        text-decoration: none;
+        display: block;
+    }    
+    .count{
+        display: inline;
+        color: #fff;
+        font-size: 16px;
+    }
+
+
+</style>
+</head>
+
+
+<body>
+<h2>TIMELINE</h2>
+<div class="container">
+    <div id="little-menu">
+        
+           <a class="p">Principles</a>
+           <a class="e">Events</a>
+     
+    </div>
+    <div class="tab">
+             <div class="decade">
+                         <div class="s_btn" >
+                                <button class="tablinks" onclick="openDecade(event, 'D_1960')" id="defaultOpen"><i class="fa fa-arrow-right" id="defaultarrow"></i> 1963-1969</button><p class="count"></p>
+                        </div>    
+                         <div id="D_1960" class="tabcontent">
+                                <h3>1963</h3>
+                                <a class="p" href="#">Being self-sufficient and not accepting offerings</a>
+                                <h3>1966</h3>
+                                <a class="p" href="#">Establishing the Buddhist Tzu Chi Merit Association</a>
+                                <a class="e" href="#">Thirty Housewives Ask Master Cheng Yen to Stay</a>
+                        </div>
+             </div>    
+             <div class="decade">    
+                        <div class="s_btn">  
+                              <button class="tablinks" onclick="openDecade(event, 'D_1970')" >  <i class="fa fa-arrow-right" ></i> 1970-1979</button><p class="count"></p>
+                        </div>
+                        <div id="D_1970" class="tabcontent">
+                                <h3>1973</h3>
+                                <a class="p" href="#">Test1</a>
+                                <h3>1976</h3>
+                                <a class="p" href="#">Test2</a>
+                        </div>
+             </div>        
+             <div class="decade"> 
+                        <div class="s_btn">                         
+                               <button class="tablinks" onclick="openDecade(event, 'D_1980')" >  <i class="fa fa-arrow-right" ></i> 1980-1989</button><p class="count"></p>
+                        </div>
+                        <div id="D_1980" class="tabcontent">
+                                <h3>1986</h3>
+                                <a class="p" href="#">Test3</a>
+                        </div>
+            </div>
+            <div class="decade">            
+                        <div class="s_btn">  
+                            <button class="tablinks" onclick="openDecade(event, 'D_1990')" >  <i class="fa fa-arrow-right" ></i> 1990-1999</button><p class="count"></p>
+                        </div>
+                        <div id="D_1990" class="tabcontent">
+                                   <p>1980 here goes the archive results</p>                      
+                        </div>
+            <div class="decade">                            
+                    <div class="s_btn">  
+                       <button class="tablinks" onclick="openDecade(event, 'D_2000')" >  <i class="fa fa-arrow-right" ></i> 2000-2009</button><p class="count"></p>
+                    </div>
+                    <div id="D_2000" class="tabcontent">
+                               <p>1980 here goes the archive results</p>                       
+                    </div>
+            </div>     
+            <div class="decade">          
+                   <div class="s_btn">  
+                        <button class="tablinks" onclick="openDecade(event, 'D_2010')" >  <i class="fa fa-arrow-right" ></i> 2010-2019</button><p class="count"></p>
+                    </div>
+                    <div id="D_2010" class="tabcontent">
+                               <p>1980 here goes the archive results</p>
+                               <p>1982 here goes the archive results</p>
+                     </div>
+             </div>     
+            <div class="decade">          
+                    <div class="s_btn">  
+                        <button class="tablinks" onclick="openDecade(event, 'D_2020')" >  <i class="fa fa-arrow-right" ></i> 2020</button><p class="count"></p>
+                    </div>
+                    <div id="D_2020" class="tabcontent">
+                               <p>1980 here goes the archive results</p>
+                    </div>
+            </div>        
+
+    </div>
+</div>
+
+
+
+
+
+    <script>
+       function openDecade(evt, myDecade){
+           let i, tabcontent, tablinks,allArrows;
+           tabcontent = document.getElementsByClassName("tabcontent");
+           for (i=0 ;i < tabcontent.length; i++){
+               tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablinks");
+           for (i=0 ;i < tablinks.length; i++){
+               tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           allArrows = document.getElementsByClassName("fa");
+           for (i=0 ;i < allArrows.length; i++){
+               allArrows[i].className = allArrows[i].className.replace("fa-arrow-down", "fa-arrow-right");
+           }
+                 
+           document.getElementById(myDecade).style.display = "block";
+           evt.currentTarget.className += " active";
+      
+           
+            evt.currentTarget.lastElementChild.className = evt.currentTarget.lastElementChild.className.replace("fa-arrow-right", "fa-arrow-down");
+           
+//            document.getElementById('count').innerHTML = document.getElementById(myDecade).getElementsByTagName('a').length+" ARTICLES";
+           
+         }
+        var x = document.getElementsByClassName("decade");
+         
+//        x[0].getElementsByClassName('count')[0].innerHTML = x[0].getElementsByTagName('a').length+" ARTICLES";
+        
+//        document.getElementsByClassName('count')[0].innerHTML = '5';
+        for (i=0; i < x.length ; i++){
+            var text = x[i].getElementsByTagName('a').length+" ARTICLES";
+            x[i].getElementsByClassName('count')[0].innerHTML = text;
+
+        }
+
+        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultarrow").className =
+        document.getElementById("defaultarrow").className.replace
+        ( 'fa-arrow-right' , 'fa-arrow-down' );
+         
+        
+       
+
+    </script>
+</body>
+
+</html>
